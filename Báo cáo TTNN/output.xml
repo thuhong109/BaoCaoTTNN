@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.5 on win32)" generated="20220728 09:51:38.382" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Users\intern.lthithuhong1\Documents\Báo cáo TTNN\tasks.robot">
+<test id="s1-t1" name="TC06. Verify that after click remember me, users do not need to login when re-opening the website" line="99">
+<kw name="Open browser and navigate to website">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://demo.nopcommerce.com/</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220728 09:51:41.278" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220728 09:51:41.311" level="INFO">Created download root directory: C:\Users\intern.lthithuhong1\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220728 09:51:41.311" level="INFO">Created symlink directory: C:\Users\intern.lthithuhong1\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220728 09:51:41.311" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220728 09:51:42.757" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220728 09:51:42.757" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220728 09:51:42.757" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<status status="PASS" starttime="20220728 09:51:41.277" endtime="20220728 09:51:48.968"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220728 09:51:48.969" endtime="20220728 09:51:49.093"/>
+</kw>
+<status status="PASS" starttime="20220728 09:51:41.276" endtime="20220728 09:51:49.094"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//a[@class="ico-login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220728 09:51:49.100" level="INFO">Clicking element '//a[@class="ico-login"]'.</msg>
+<status status="PASS" starttime="20220728 09:51:49.095" endtime="20220728 09:51:49.870"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@class="email"]</arg>
+<arg>${Valid_Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220728 09:51:49.872" level="INFO">Typing text 'thuhongabc@gmail.com' into text field '//input[@class="email"]'.</msg>
+<status status="PASS" starttime="20220728 09:51:49.871" endtime="20220728 09:51:49.978"/>
+</kw>
+<kw name="Input Password" library="RPA.Browser.Selenium">
+<arg>//input[@class="password"]</arg>
+<arg>${Valid_Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220728 09:51:49.980" level="INFO">Typing password into text field '//input[@class="password"]'.</msg>
+<msg timestamp="20220728 09:51:50.014" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220728 09:51:50.068" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220728 09:51:49.979" endtime="20220728 09:51:50.068"/>
+</kw>
+<kw name="Select Checkbox" library="RPA.Browser.Selenium">
+<arg>//input[@id="RememberMe"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220728 09:51:50.069" level="INFO">Selecting checkbox '//input[@id="RememberMe"]'.</msg>
+<status status="PASS" starttime="20220728 09:51:50.069" endtime="20220728 09:51:50.134"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220728 09:51:52.143" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220728 09:51:50.135" endtime="20220728 09:51:52.143"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>//button[@class="button-1 login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220728 09:51:52.145" level="INFO">Clicking button '//button[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20220728 09:51:52.144" endtime="20220728 09:51:52.934"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220728 09:52:22.948" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20220728 09:51:52.936" endtime="20220728 09:52:22.948"/>
+</kw>
+<status status="PASS" starttime="20220728 09:51:41.275" endtime="20220728 09:52:22.949"/>
+</test>
+<doc>Template robot main suite.</doc>
+<status status="PASS" starttime="20220728 09:51:38.382" endtime="20220728 09:52:22.952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
